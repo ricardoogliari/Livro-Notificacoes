@@ -1,0 +1,192 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <RadioGroup
+            android:id="@+id/radioTipoNot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <RadioButton
+                android:id="@+id/rdbNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Normal View" />
+            <RadioButton
+                android:id="@+id/rdbBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Big View" />
+        </RadioGroup>
+        <TextView
+            android:id="@+id/txtEstilos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estilo da Big View:"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/groupEstilos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+            <RadioButton
+                android:id="@+id/rdbBigPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Big Picture" />
+            <RadioButton
+                android:id="@+id/rdbBigText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Big Text" />
+            <RadioButton
+                android:id="@+id/rdbInbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inbox" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Progress Bar?" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/rdbSemProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Sem ProgressBar" />
+
+            <RadioButton
+                android:id="@+id/rdbProgressDeterminado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ProgressBar Determinado" />
+            <RadioButton
+                android:id="@+id/rdbProgressIndeterminado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ProgressBar Indeterminado" />
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Content Text:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/edtContentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Content Title:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/edtContentTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAtualizacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nr. Atualizações:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/edtAtualizacoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="imgCompasso"
+                android:src="@android:drawable/ic_menu_compass" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="imgAgenda"
+                android:src="@android:drawable/ic_menu_agenda" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="imgAdd"
+                android:src="@android:drawable/ic_menu_add" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="imgAlways"
+                android:src="@android:drawable/ic_menu_always_landscape_portrait" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="imgCamera"
+                android:src="@android:drawable/ic_menu_camera" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgIconeEscolhido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@android:drawable/ic_menu_compass" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="gerarNotificacao"
+            android:text="Gerar" />
+
+    </LinearLayout>
+</ScrollView>
